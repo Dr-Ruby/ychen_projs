@@ -1,245 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yizuo Chen's Projects</title>
-    <style>
-        body {
-            font-family: Consolas, monospace;
-            margin: 0;
-            padding: 0;
-            background-color: #4b007d; /* Tsinghua dark violet */
-            color: #e0e0e0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yizuo Chen's Projects</title>
+  <style>
+    body {
+      font-family: Consolas, monospace;
+      margin: 0;
+      padding: 0;
+      background-color: #4b007d; /* Tsinghua dark violet */
+      color: #e0e0e0;
+    }
 
-        header {
-            background-color: #5e17eb;
-            color: white;
-            padding: 1.5rem 2rem;
-            text-align: center;
-            font-size: 1.6rem;
-            letter-spacing: 0.5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-        }
+    header {
+      background-color: #5e17eb;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 1.6rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    }
 
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        .header-content img {
-            max-width: 450px;        /* scales down large logo */
-            height: auto;            /* keeps correct proportions */
-            border-radius: 0;        /* remove circular clipping */
-            background: none;
-            box-shadow: none;
-        }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
 
+    .header-content img {
+      max-width: 450px;
+      height: auto;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+    }
 
-        nav {
-            background-color: #3b0066;
-            text-align: center;
-            padding: 0.8rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    nav {
+      background-color: #3b0066;
+      text-align: center;
+      padding: 0.8rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-        nav a {
-            margin: 0 1.5rem;
-            text-decoration: none;
-            color: #d9b3ff;
-            font-weight: bold;
-            transition: color 0.3s ease, transform 0.2s ease;
-        }
+    nav a {
+      margin: 0 1.5rem;
+      text-decoration: none;
+      color: #d9b3ff;
+      font-weight: bold;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
 
-        nav a:hover {
-            color: #ffffff;
-            transform: scale(1.05);
-        }
+    nav a:hover {
+      color: #ffffff;
+      transform: scale(1.05);
+    }
 
-        section {
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 900px;
-            background: #ffffff;
-            color: #222;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-        }
+    section {
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 900px;
+      background: #ffffff;
+      color: #222;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
 
-        h1, h2, h3 {
-            color: #5e17eb;
-        }
+    h1, h2, h3 {
+      color: #5e17eb;
+    }
 
-        h2 {
-            border-bottom: 2px solid #5e17eb;
-            padding-bottom: 0.4rem;
-            margin-bottom: 1.2rem;
-        }
+    h2 {
+      border-bottom: 2px solid #5e17eb;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
 
-        img, video {
-            max-width: 100%;
-            border-radius: 10px;
-            margin: 1rem 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
+    img, video {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
 
-        a {
-            color: #5e17eb;
-        }
+    button.toggle-btn {
+      background-color: #5e17eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      margin: 0.8rem 0;
+      transition: background-color 0.3s ease;
+    }
 
-        a:hover {
-            text-decoration: underline;
-            color: #3b0066;
-        }
+    button.toggle-btn:hover {
+      background-color: #3b0066;
+    }
 
-        a.file-link {
-            display: inline-block;
-            margin-bottom: 0.5rem;
-            color: #5e17eb;
-        }
+    .hidden {
+      display: none;
+    }
 
-        a.file-link:hover {
-            color: #3b0066;
-        }
+    a {
+      color: #5e17eb;
+    }
 
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #3b0066;
-            color: white;
-            font-size: 0.9rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
-        }
-    </style>
+    a:hover {
+      text-decoration: underline;
+      color: #3b0066;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3b0066;
+      color: white;
+      font-size: 0.9rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="logo.png" alt="Custom Dynamics Logo">
-            <h1>Yizuo Chen's Projects</h1>
-        </div>
-    </header>
+  <header>
+    <div class="header-content">
+      <img src="logo.png" alt="Custom Dynamics Logo" />
+      <h1>Yizuo Chen's Projects</h1>
+    </div>
+  </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section id="home">
-        <h2>Introduction</h2>
-        <p>The following are selected projects completed during my undergraduate studies. For further details or inquiries, please don’t hesitate to reach out via the email address listed below.</p>
-        <p><strong>Yizuo Chen</strong>, B.A.Sc., Electrical Engineering (4.30/4.33), Department of Electrical and Computer Engineering, Faculty of Applied Science, British Columbia Institute of Technology<br>
-        Work Mail: <a href="mailto:ychen615@bcit.ca">ychen615@bcit.ca</a><br>
-        Personal: <a href="mailto:yizuochen1@gmail.com">yizuochen1@gmail.com</a></p>
-    </section>
+  <section id="home">
+    <h2>Introduction</h2>
+    <p>
+      The following are selected projects completed during my undergraduate studies. For further details or inquiries, please don’t hesitate to reach out via the email address listed below.
+    </p>
+    <p>
+      <strong>Yizuo Chen</strong>, B.A.Sc., Electrical Engineering (4.30/4.33)<br />
+      Department of Electrical and Computer Engineering, Faculty of Applied Science, British Columbia Institute of Technology<br />
+      Work Mail: <a href="mailto:ychen615@bcit.ca">ychen615@bcit.ca</a><br />
+      Personal: <a href="mailto:yizuochen1@gmail.com">yizuochen1@gmail.com</a>
+    </p>
+  </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
+  <section id="projects">
+    <h2>Projects</h2>
 
-        <article id="pi-car">
-            <h3>Raspberry Pi Car with QR Code Detection</h3>
-            <p>A collaborative project by Yizuo Chen and Joshua Lee. This car is powered by a Raspberry Pi, uses a Pi Camera with OpenCV and C++, and identifies QR codes to launch BB balls. The system operates wirelessly using servers.</p>
-            <h4>Gallery</h4>
-            <img src="Car_Schematic.png" alt="Car Schematic">
-            <a class="file-link" href="Car_Schematic.png" target="_blank">Open Car_Schematic.png</a><br>
-            <img src="Car_PCB1.png" alt="PCB Layout">
-            <a class="file-link" href="Car_PCB1.png" target="_blank">Open Car_PCB1.png</a><br>
-            <img src="Car_PCB_real.png" alt="Assembled PCB">
-            <a class="file-link" href="Car_PCB_real.png" target="_blank">Open Car_PCB_real.png</a><br>
-            <img src="IMG_4462.jpg" alt="Assembled Car">
-            <a class="file-link" href="IMG_4462.jpg" target="_blank">Open IMG_4462.jpg</a>
-            <h4>Videos</h4>
-            <video controls>
-                <source src="IMG_4335.mov" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <a class="file-link" href="IMG_4335.mov" target="_blank">Open IMG_4335.mov</a><br>
-            <video controls>
-                <source src="IMG_4471.mov" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <a class="file-link" href="IMG_4471.mov" target="_blank">Open IMG_4471.mov</a>
-        </article>
+    <!-- Raspberry Pi Car Project -->
+    <article id="pi-car">
+      <h3>Raspberry Pi Car with QR Code Detection</h3>
+      <p>
+        A collaborative project by Yizuo Chen and Joshua Lee. This car is powered by a Raspberry Pi, uses a Pi Camera with OpenCV and C++, and identifies QR codes to launch BB balls. The system operates wirelessly using servers.
+      </p>
+      <button class="toggle-btn" onclick="toggleVisibility('pi-media')">Show Gallery</button>
+      <div id="pi-media" class="hidden">
+        <img src="Car_Schematic.png" alt="Car Schematic" />
+        <img src="Car_PCB1.png" alt="PCB Layout" />
+        <img src="Car_PCB_real.png" alt="Assembled PCB" />
+        <img src="IMG_4462.jpg" alt="Assembled Car" />
+        <video controls>
+          <source src="IMG_4335.mov" type="video/mp4" />
+        </video>
+        <video controls>
+          <source src="IMG_4471.mov" type="video/mp4" />
+        </video>
+      </div>
+    </article>
 
-        <article id="ac-dc-power-supply">
-            <h3>AC to DC Power Supply</h3>
-            <p>This project involves designing and building an AC to DC power supply. The schematic was created in KiCad, the circuit board was printed, and all components were soldered and assembled. The power supply provides a voltage range from -20V to 20V, adjustable using knobs.</p>
-            <h4>Gallery</h4>
-            <img src="IMG_7635.jpg" alt="Assembled Power Supply">
-            <a class="file-link" href="IMG_7635.jpg" target="_blank">Open IMG_7635.jpg</a><br>
-            <img src="IMG_7701.jpg" alt="Backside of Power Supply">
-            <a class="file-link" href="IMG_7701.jpg" target="_blank">Open IMG_7701.jpg</a><br>
-            <img src="IMG_7833.jpg" alt="Power Supply Circuit">
-            <a class="file-link" href="IMG_7833.jpg" target="_blank">Open IMG_7833.jpg</a><br>
-            <img src="IMG_7879.jpg" alt="Testing the Power Supply">
-            <a class="file-link" href="IMG_7879.jpg" target="_blank">Open IMG_7879.jpg</a><br>
-            <h4>Documents</h4>
-            <a class="file-link" href="A01324351_Chen_SCH.pdf" target="_blank">Download A01324351_Chen_SCH.pdf</a><br>
-            <a class="file-link" href="A01324351_Chen_PCB.pdf" target="_blank">Download A01324351_Chen_PCB.pdf</a>
-        </article>
+    <!-- AC to DC Power Supply Project -->
+    <article id="ac-dc-power-supply">
+      <h3>AC to DC Power Supply</h3>
+      <p>
+        This project involves designing and building an AC to DC power supply. The schematic was created in KiCad, the circuit board was printed, and all components were soldered and assembled. The power supply provides a voltage range from -20V to 20V, adjustable using knobs.
+      </p>
+      <button class="toggle-btn" onclick="toggleVisibility('ac-media')">Show Gallery</button>
+      <div id="ac-media" class="hidden">
+        <img src="IMG_7635.jpg" alt="Assembled Power Supply" />
+        <img src="IMG_7701.jpg" alt="Backside of Power Supply" />
+        <img src="IMG_7833.jpg" alt="Power Supply Circuit" />
+        <img src="IMG_7879.jpg" alt="Testing the Power Supply" />
+      </div>
+    </article>
 
-        <article id="ball-sorter">
-            <h3>Color Sorting Ball Machine</h3>
-            <p>A project using a Raspberry Pi, C++, and OpenCV to sort balls of different colors into separate bins. This system was designed and implemented to demonstrate object detection and real-time sorting capabilities.</p>
-            <h4>Videos</h4>
-            <video controls>
-                <source src="studio_video_1709876742981483.mov" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <a class="file-link" href="studio_video_1709876742981483.mov" target="_blank">Open studio_video_1709876742981483.mov</a><br>
-            <video controls>
-                <source src="studio_video_1710284363700552.mov" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <a class="file-link" href="studio_video_1710284363700552.mov" target="_blank">Open studio_video_1710284363700552.mov</a>
-        </article>
+    <!-- Color Sorting Ball Machine -->
+    <article id="ball-sorter">
+      <h3>Color Sorting Ball Machine</h3>
+      <p>
+        A project using a Raspberry Pi, C++, and OpenCV to sort balls of different colors into separate bins. This system was designed and implemented to demonstrate object detection and real-time sorting capabilities.
+      </p>
+      <button class="toggle-btn" onclick="toggleVisibility('ball-media')">Show Videos</button>
+      <div id="ball-media" class="hidden">
+        <video controls>
+          <source src="studio_video_1709876742981483.mov" type="video/mp4" />
+        </video>
+        <video controls>
+          <source src="studio_video_1710284363700552.mov" type="video/mp4" />
+        </video>
+      </div>
+    </article>
 
-        <article id="radar-module">
-            <h3>Ultrasonic Radar Module (Collaborative Project with Ryan McKay)</h3>
-            <p>This collaborative project implements a real-time radar visualization system using a DE0-Nano-SoC FPGA board, an ultrasonic sensor (HC-SR04), and a servo motor. The radar data is transmitted via UART to a Python visualization interface that displays detected objects in a semicircular sweep, similar to a heartbeat sensor. Developed using SystemVerilog and Python (OpenCV).</p>
-            <p><a href="https://github.com/Dr-Ruby/F.L.I.R." target="_blank">View Project on GitHub</a></p>
-        </article>
+    <!-- Radar Module -->
+    <article id="radar-module">
+      <h3>Ultrasonic Radar Module (Collaborative Project with Ryan McKay)</h3>
+      <p>
+        This collaborative project implements a real-time radar visualization system using a DE0-Nano-SoC FPGA board, an ultrasonic sensor (HC-SR04), and a servo motor. The radar data is transmitted via UART to a Python visualization interface that displays detected objects in a semicircular sweep, similar to a heartbeat sensor. Developed using SystemVerilog and Python (OpenCV).
+      </p>
+      <p><a href="https://github.com/Dr-Ruby/F.L.I.R." target="_blank">View Project on GitHub</a></p>
+    </article>
 
-        <h2>Ongoing Projects</h2>
-        <article id="social-robot">
-            <h3>Social Robot for Pediatric Anxiety Relief</h3>
-            <p>A research collaboration with BC Children’s Hospital Research Institute and the UBC Faculty of Medicine, developing an interactive NAO robot to support pediatric patients during medical procedures. The system integrates speech recognition (Vosk), multimodal interaction, and emotional engagement analysis.</p>
-        </article>
+    <h2>Ongoing Projects</h2>
+    <article id="social-robot">
+      <h3>Social Robot for Pediatric Anxiety Relief</h3>
+      <p>
+        A research collaboration with BC Children’s Hospital Research Institute and the UBC Faculty of Medicine, developing an interactive NAO robot to support pediatric patients during medical procedures. The system integrates speech recognition (Vosk), multimodal interaction, and emotional engagement analysis.
+      </p>
+    </article>
 
-        <article id="nfc-attendance">
-            <h3>Student ID Attendance System (Real-Time Embedded Systems)</h3>
-            <p>Part of the Real-Time Embedded Systems design elective, this project builds a student attendance tracking system based on NFC (Near Field Communication) using Raspberry Pi Pico W. It records student IDs and transmits data wirelessly to a remote server for real-time logging.</p>
-        </article>
+    <article id="nfc-attendance">
+      <h3>Student ID Attendance System (Real-Time Embedded Systems)</h3>
+      <p>
+        Part of the Real-Time Embedded Systems design elective, this project builds a student attendance tracking system based on NFC (Near Field Communication) using Raspberry Pi Pico W. It records student IDs and transmits data wirelessly to a remote server for real-time logging.
+      </p>
+    </article>
 
-        <article id="face-detection">
-            <h3>Face Detection System (Digital Image and Video Processing)</h3>
-            <p>An image processing project focused on real-time face detection using OpenCV and MATLAB. The system is trained to identify faces in video streams and explore techniques such as Haar cascades and deep learning-based detectors.</p>
-        </article>
-    </section>
+    <article id="face-detection">
+      <h3>Face Detection System (Digital Image and Video Processing)</h3>
+      <p>
+        An image processing project focused on real-time face detection using OpenCV and MATLAB. The system is trained to identify faces in video streams and explore techniques such as Haar cascades and deep learning-based detectors.
+      </p>
+    </article>
+  </section>
 
-    <section id="about">
-        <h2>About</h2>
-        <p>Hi, I'm Yizuo Chen, a fourth-year Electrical Engineering student in the Department of Electrical and Computer Engineering, Faculty of Applied Science, at the British Columbia Institute of Technology (BCIT). I am passionate about designing and building innovative engineering solutions that bridge hardware and software. This website highlights my projects and academic achievements.</p>
-    </section>
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      Hi, I'm Yizuo Chen, a fourth-year Electrical Engineering student in the Department of Electrical and Computer Engineering, Faculty of Applied Science, at the British Columbia Institute of Technology (BCIT). I am passionate about designing and building innovative engineering solutions that bridge hardware and software. This website highlights my projects and academic achievements.
+    </p>
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:yizuochen1@gmail.com">yizuochen1@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/yizuochen7012/" target="_blank">linkedin.com/in/yizuochen7012</a></p>
-    </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:yizuochen1@gmail.com">yizuochen1@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/yizuochen7012/" target="_blank">linkedin.com/in/yizuochen7012</a></p>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Yizuo Chen. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Yizuo Chen. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleVisibility(id) {
+      const element = document.getElementById(id);
+      if (element.classList.contains("hidden")) {
+        element.classList.remove("hidden");
+      } else {
+        element.classList.add("hidden");
+      }
+    }
+  </script>
 </body>
 </html>
