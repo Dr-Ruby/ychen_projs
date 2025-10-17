@@ -9,13 +9,13 @@
             font-family: Consolas, monospace;
             margin: 0;
             padding: 0;
-            background-color: #660099; /* Tsinghua dark violet */
-            color: #f0f0f0;
+            background-color: #4b007d; /* Deep violet base */
+            color: #e0e0e0;
         }
 
         header {
-            background-color: #4b007d;
-            color: #ffffff;
+            background-color: #5e17eb; /* Tsinghua purple tone */
+            color: white;
             padding: 1.5rem;
             text-align: center;
             font-size: 1.6rem;
@@ -24,16 +24,18 @@
         }
 
         nav {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: #3b0066;
             text-align: center;
             padding: 0.8rem 0;
-            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav a {
             margin: 0 1.5rem;
             text-decoration: none;
-            color: #e0d4ff;
+            color: #d9b3ff;
             font-weight: bold;
             transition: color 0.3s ease, transform 0.2s ease;
         }
@@ -54,11 +56,11 @@
         }
 
         h1, h2, h3 {
-            color: #5e17eb;
+            color: #5e17eb; /* Tsinghua purple */
         }
 
         h2 {
-            border-bottom: 2px solid #660099;
+            border-bottom: 2px solid #5e17eb;
             padding-bottom: 0.4rem;
             margin-bottom: 1.2rem;
         }
@@ -76,12 +78,13 @@
 
         a:hover {
             text-decoration: underline;
+            color: #3b0066;
         }
 
         footer {
             text-align: center;
             padding: 1rem;
-            background-color: #4b007d;
+            background-color: #3b0066;
             color: white;
             font-size: 0.9rem;
             position: fixed;
