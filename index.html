@@ -6,10 +6,10 @@
     <title>Yizuo Chen's Projects</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Consolas, monospace;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: violet;
             color: #333;
         }
         header {
@@ -73,13 +73,14 @@
     <section id="home">
         <h2>Welcome</h2>
         <p>Welcome to Yizuo Chen's project showcase! Here you will find detailed information about various engineering projects I have worked on.</p>
-<p><strong>Yizuo Chen</strong>, B.A.Sc., Electrical Engineering, Department of Electrical and Computer Engineering, Faculty of Applied Science, British Columbia Institute of Technology<br>
+        <p><strong>Yizuo Chen</strong>, B.A.Sc., Electrical Engineering, Department of Electrical and Computer Engineering, Faculty of Applied Science, British Columbia Institute of Technology<br>
         Work Mail: <a href="mailto:ychen615@bcit.ca">ychen615@bcit.ca</a><br>
         Personal: <a href="mailto:yizuochen1@gmail.com">yizuochen1@gmail.com</a></p>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
+
         <article id="pi-car">
             <h3>Raspberry Pi Car with QR Code Detection</h3>
             <p>A collaborative project by Yizuo Chen and Joshua Lee. This car is powered by a Raspberry Pi, uses a Pi Camera with OpenCV and C++, and identifies QR codes to launch BB balls. The system operates wirelessly using servers.</p>
@@ -127,11 +128,34 @@
                 Your browser does not support the video tag.
             </video>
         </article>
+
+        <article id="radar-module">
+            <h3>Ultrasonic Radar Module</h3>
+            <p>This project implements a real-time radar visualization system using a DE0-Nano-SoC FPGA board, an ultrasonic sensor (HC-SR04), and a servo motor. The radar data is transmitted via UART to a Python visualization interface that displays detected objects in a semicircular sweep, similar to a heartbeat sensor. Developed using SystemVerilog and Python (OpenCV).</p>
+            <p><a href="https://github.com/Dr-Ruby/F.L.I.R." target="_blank">View Project on GitHub</a></p>
+        </article>
+
+        <h2>Ongoing Projects</h2>
+
+        <article id="social-robot">
+            <h3>Social Robot for Pediatric Anxiety Relief</h3>
+            <p>A research collaboration with BC Children’s Hospital Research Institute and the UBC Faculty of Medicine, developing an interactive NAO robot to support pediatric patients during medical procedures. The system integrates speech recognition (Vosk), multimodal interaction, and emotional engagement analysis.</p>
+        </article>
+
+        <article id="nfc-attendance">
+            <h3>Student ID Attendance System (Real-Time Embedded Systems)</h3>
+            <p>Part of the Real-Time Embedded Systems design elective, this project builds a student attendance tracking system based on NFC (Near Field Communication) using Raspberry Pi Pico W. It records student IDs and transmits data wirelessly to a remote server for real-time logging.</p>
+        </article>
+
+        <article id="face-detection">
+            <h3>Face Detection System (Digital Image and Video Processing)</h3>
+            <p>An image processing project focused on real-time face detection using OpenCV and MATLAB. The system is trained to identify faces in video streams and explore techniques such as Haar cascades and deep learning-based detectors.</p>
+        </article>
     </section>
 
     <section id="about">
         <h2>About</h2>
-        <p>I'm Yizuo Chen, a fourth-year Electrical Engineering student at BCIT with a passion for designing and building innovative solutions. This website highlights my projects and achievements.</p>
+        <p>Hi, I'm Yizuo Chen, a fourth-year Electrical Engineering student in the Department of Electrical and Computer Engineering, Faculty of Applied Science, at the British Columbia Institute of Technology (BCIT). I am passionate about designing and building innovative engineering solutions that bridge hardware and software. This website highlights my projects and academic achievements.</p>
     </section>
 
     <section id="contact">
