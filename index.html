@@ -141,7 +141,6 @@
     <a href="#home">Home</a>
     <a href="#projects">Projects</a>
     <a href="#about">About</a>
-    <a href="#contact">Contact</a>
   </nav>
 
   <section id="home">
@@ -154,8 +153,8 @@
       Department of Electrical and Computer Engineering, Faculty of Applied Science, British Columbia Institute of Technology<br />
       Work Mail: <a href="mailto:ychen615@my.bcit.ca">ychen615@bcit.ca</a><br />
       Personal: <a href="mailto:yizuochen1@gmail.com">yizuochen1@gmail.com</a><br />
+      LinkedIn: <a href="https://www.linkedin.com/in/yizuochen7012/" target="_blank">linkedin.com/in/yizuochen7012</a><br />
       Curriculum Vitae: <a href="Yizuo_Chen_CV.pdf" target="_blank"><strong>Yizuo Chen's CV</strong></a>
-  </p>
     </p>
   </section>
 
@@ -254,12 +253,6 @@
     </p>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:yizuochen1@gmail.com">yizuochen1@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/yizuochen7012/" target="_blank">linkedin.com/in/yizuochen7012</a></p>
-  </section>
-
   <footer>
     <p>&copy; 2025 Yizuo Chen. All rights reserved.</p>
   </footer>
@@ -267,11 +260,7 @@
   <script>
     function toggleVisibility(id) {
       const element = document.getElementById(id);
-      if (element.classList.contains("hidden")) {
-        element.classList.remove("hidden");
-      } else {
-        element.classList.add("hidden");
-      }
+      element.classList.toggle("hidden");
     }
   </script>
 </body>
